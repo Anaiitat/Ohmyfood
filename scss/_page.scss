@@ -1,0 +1,222 @@
+.cs-loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    animation: loader 0.01s;
+    animation-delay: 3.5s;
+    animation-fill-mode: both;
+    z-index: 10000;
+    background:rgba(255, 255, 255, 0.90)
+}
+
+.cs-loader-inner {
+    transform: translateY(-50%);
+    top: 50%;
+    position: absolute;
+    width: calc(100% - 200px);
+    color:$color-primary;
+    padding: 0 100px;
+    text-align: center;
+}
+  
+.cs-loader-inner label {
+    font-size: 20px;
+    opacity: 0;
+    display:inline-block;
+}
+  
+.cs-loader-inner label:nth-child(6) {
+    -webkit-animation: lol 3s  ease-in-out;
+    animation: lol 3s  ease-in-out; 
+}
+  
+.cs-loader-inner label:nth-child(5) {
+    -webkit-animation: lol 3s 100ms  ease-in-out;
+    animation: lol 3s 100ms  ease-in-out;
+}
+  
+.cs-loader-inner label:nth-child(4) {
+    -webkit-animation: lol 3s 200ms  ease-in-out;
+    animation: lol 3s 200ms  ease-in-out;
+}
+  
+.cs-loader-inner label:nth-child(3) {
+    -webkit-animation: lol 3s 300ms  ease-in-out;
+    animation: lol 3s 300ms  ease-in-out;
+}
+  
+.cs-loader-inner label:nth-child(2) {
+    -webkit-animation: lol 3s 400ms  ease-in-out;
+    animation: lol 3s 400ms  ease-in-out;
+}
+  
+.cs-loader-inner label:nth-child(1) {
+    -webkit-animation: lol 3s 500ms  ease-in-out;
+    animation: lol 3s 500ms  ease-in-out;
+}
+
+.lieux{
+    display: flex;
+    justify-content: center;
+    padding: 1.5rem;
+    font-size: 1.2rem;
+    background-color: rgb(243, 243, 243);
+
+    &__icon{
+        margin-right: 1rem;
+    }
+
+    &__texte{
+        font-weight: bold;
+    }
+}
+
+.description{
+    text-align: center;
+    background-color: rgb(248, 248, 248);
+
+    &__titre{
+        margin: 0;
+        padding: 1.5rem;
+    }
+
+    &__texte{
+        font-weight: 50;
+    }
+}
+
+.tuto h2{
+    margin:$margin
+}
+
+.fonctionnement ol{
+    display: flex;
+    justify-content: center;
+    counter-reset: compteListe;
+    padding: 1rem 0rem 0rem 0rem;
+}
+
+.choix{
+    margin: 1rem 2rem 0rem 2rem;
+    border: 2px solid rgb(248, 248, 248);
+    padding: 1.5rem 1.5rem 1.5rem 0rem;
+    border-radius: 1.5rem;
+    background-color: rgb(248, 248, 248);
+    box-shadow: 0.25rem 0.25rem 10px rgba(0,0,0,.25);
+    list-style:none;
+    text-decoration: none;
+
+    &__lien{
+        text-decoration: none;
+        color: black;
+    }
+
+    &__icon{
+        padding-right: 1.5rem;
+        opacity: 0.6;
+    }
+
+    &__texte{
+        font-weight: bold;
+    }
+
+    &:active {
+        background-color: #9256dc3a;
+        box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.50);
+        border:none;
+    }
+
+    &:hover {
+        background-color: #9256dc3a;
+        box-shadow: 0.25rem 0.25rem 10px rgba(0, 0, 0, 0.50);
+        border:none;
+    }
+}
+
+.choix::before{
+    counter-increment: compteListe 1;
+    content: counter(compteListe) " ";
+    background: #9356dc;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 100px;
+    display: inline-grid;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    position: relative;
+    left: -0.8rem;
+}
+
+.restaurants{
+    background-color: #f6f6f6c4;
+}
+
+.restaurants h2{
+    margin: $margin;
+    padding-top: 2rem;
+}
+
+.cartes{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    
+    &__lien{
+        text-decoration: none;
+        color: black;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        max-width: 100%;
+        padding: 1rem;
+    }
+
+    &__position{
+        width:700px;
+        border:1px solid #f2f2f2;
+        border-radius: 20px;
+        margin-right: 0;
+        margin-left: 0;
+        background-color: white;
+        margin:0;
+    }
+
+    &__img{
+        width: 700px;
+        height: 210px;
+        object-fit: cover;
+        border-radius: 20px 20px 0px 0px;
+        max-width: 100%;
+    }
+
+    &__nouveau{
+        position: absolute;
+        margin-left: -100px;
+        margin-top: 30px;
+        padding: 0.5rem;
+        border: 1px solid rgb(151, 235, 151);
+        background-color: rgb(151, 235, 151);
+        color: green;
+    }
+
+   &__footer{
+       display: flex;
+       justify-content: space-between;
+    }
+
+   &__div{
+       margin-left: 1rem;
+    }
+
+   &__titre{
+       margin-bottom:0rem;
+    }
+
+   &__texte{
+       margin-top:0rem;
+    }
+}
+
