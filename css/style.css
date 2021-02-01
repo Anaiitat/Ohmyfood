@@ -59,7 +59,6 @@ body {
 }
 .coeur:hover .coeur__coloré {
   background: -webkit-linear-gradient(0deg, rgba(147, 86, 220, 0.9), rgba(255, 121, 218, 0.9));
-  background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   opacity: 1;
